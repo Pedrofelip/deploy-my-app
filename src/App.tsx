@@ -1,5 +1,3 @@
-import { Suspense } from 'react'
-import './App.css'
 import { Integrantes } from './pages/integrantes/Integrantes'
 import { Home } from './pages/home/Home'
 import { Login } from './pages/login/Login'
@@ -13,7 +11,6 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    <Suspense fallback={<div>carregando...</div>}>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/cadastro' element={<Cadastro/>}/>
@@ -22,7 +19,6 @@ function App() {
       <Route path='/solicitações' element={<Solicitacao/>}/>
       <Route path='/acompanhamento' element={<Acompanhamento/>}/>
     </Routes>
-    </Suspense>
     </BrowserRouter>
     </>
   )
